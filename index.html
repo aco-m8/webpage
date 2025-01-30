@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Dos meses Amor</title>
+
+</head>
+<body>
+  <!-- Mensaje previo al abrir el sobre -->
+  <div class="message-before">
+    <p>Amoor, Feliz 2do mes juntos </p>
+  </div>
+
+  <!-- Sobre -->
+  <div class="envelope" onclick="openEnvelope()">
+    <div class="flap"></div>
+    <div class="message">
+      <h1>Feliz 2 meses jeje </h1>
+      <p>Ya paso dos meses, quiero que sepas que sos muy importante para mi</p>
+      <button onclick="showGallery()">Ver nuestros recuerdos</button>
+    </div>
+  </div>
+
+  <!-- Galería de imágenes -->
+  <div class="gallery">
+    <button class="close" onclick="hideGallery()">Cerrar</button>
+    <h2>Nuestros momentos especiales</h2>
+    <div class="images">
+      <img src="image1.jpeg" alt="Imagen 1">
+      <img src="image2.jpeg" alt="Imagen 2">
+      <img src="image3.jpeg" alt="Imagen 3">
+      <img src="image6.jpeg" alt="Imagen 4">
+    </div>
+  </div>
+
+  <script>
+    // Función para abrir el sobre
+    function openEnvelope() {
+      document.querySelector('.envelope').style.transform = 'scale(1.1)';
+      document.querySelector('.message-before').style.opacity = 0;
+      setTimeout(function() {
+        document.querySelector('.message-before').style.display = 'none';
+      }, 1000);
+    }
+
+    // Función para mostrar la galería
+    function showGallery() {
+      document.querySelector('.gallery').classList.add('visible');
+    }
+
+    // Función para ocultar la galería
+    function hideGallery() {
+      document.querySelector('.gallery').classList.remove('visible');
+    }
+  </script>
+</body>
+</html>
